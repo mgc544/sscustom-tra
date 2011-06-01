@@ -1,0 +1,348 @@
+﻿@import "compass/reset";
+@import "compass/utilities/general";
+@import "compass/css3";
+@import "960/grid";
+
+$ninesixty-columns: 24;
+
+/*------------------------ Global syles----------------------------*/
+
+body{
+	background:#333 !important;
+	padding: 10px 0px;
+}
+
+/*------------------------ Layout syles----------------------------*/
+
+.two-column-left, 
+.full-width, 
+.two-column-right,
+.three-column {
+	background:#fff;
+}
+
+/* for left sidebar main-content */
+.full-width {
+  @include grid-container;
+  overflow:hidden;
+  #header,
+  #footer,
+  #main-content {
+    @include grid-unit-base; }
+  #header, #footer {
+    @include grid-width(24); }
+  #main-content {
+    @include grid-width(24); } }
+    
+/* for left sidebar main-content */
+.two-column-left {
+  @include grid-container;
+  overflow:hidden;
+  #header,
+  #footer,
+  #sidebar-left,
+  #main-content {
+    @include grid-unit-base; }
+  #header, #footer {
+    @include grid-width(24); }
+  #sidebar-left {
+    @include grid-width(6); }
+  #main-content {
+    @include grid-width(18); } }
+
+/* for right sidebar main-content */    
+.two-column-right {
+  @include grid-container;
+  overflow:hidden;
+  #header,
+  #footer,
+  #sidebar-right,
+  #main-content {
+    @include grid-unit-base; }
+  #header, #footer {
+    @include grid-width(24); }
+  #sidebar-right {
+    @include grid-width(6); }
+  #main-content {
+    @include grid-width(18); } }
+
+/* for left and right sidebars main-content centered */
+.three-column {
+  @include grid-container;
+  overflow:hidden;
+  #header,
+  #footer,
+  #sidebar-left,
+  #sidebar-right,
+  #main-content {
+    @include grid-unit-base; }
+  #header, #footer {
+    @include grid-width(24); }
+  #sidebar-left, #sidebar-right {
+    @include grid-width(6);  }
+  #main-content {
+    @include grid-width(12); } }
+
+
+/*------------------------ Custom syles----------------------------*/
+	
+
+#header{
+	height:100px;
+	background: #ccc;
+}
+
+
+
+
+/*------------------------ Product syles----------------------------*/
+$case-color: #a71732;
+$nh-color: #a71732;
+$jd-color: #1f772d;
+$cc-color: #ffc325;
+$kubota-color: #07a9b8;
+$base-color: #ccc;
+
+@mixin manufacture($color){
+	h3{
+		background-color:$color;
+		color:#fff !important;
+		a{
+		color:#fff !important;
+			span.viewall{
+			visibility:hidden;
+			}
+			&:hover span.viewall{
+				background: $color / 2;
+				color:#fff !important;
+			}
+		}
+	}
+	.producttable{
+		thead tr{
+			background: $color / 2 !important;
+			th{
+			padding:5px;
+			color:#fff;
+			}
+		}
+		tr.odd {
+			background: #ccc;
+		}
+	}
+	
+	.product-thumb{
+		span.title{
+			background-color: $color  !important;
+			color:#fff !important;
+		}
+	}
+}
+
+
+/* Sample manufacure specific class ---  Replace with appropriate color */
+.new-mainproductholder{
+	@include manufacture($base-color);
+};
+
+.three-column .category{
+	overflow:hidden;
+	clear:both;
+	h3{
+		margin:18 0;
+		font-size: 18px!important;
+		font-weight: bold!important;
+		padding: 2px 4px;
+			a{
+			font-size: 19px!important;
+			position:relative;
+			width:auto;
+			text-decoration:none!important;
+				span.viewall{
+				visibility:hidden;
+				}
+			&:hover span.viewall{
+				visibility:visible;
+				font-size:10px;
+				font-weight:normal;
+				position:absolute;
+				display:block;
+				padding:1px 5px;
+				text-decoration:none!important;
+				top:3px;
+				right:-35px;
+				@include border-radius(5px);
+				}
+			}
+	}
+
+	.item{
+		display:block;
+		float:right;
+		width:auto;
+		margin:0px 5px 15px 5px;
+		padding: 5px;
+		border: 1px solid #ccc;
+		@include border-radius(5px);
+		span.title{
+			clear:both;
+			display: block;
+		}	
+	}
+	
+	.product-thumb{
+		display:block;
+		float:left;
+		width:auto;
+		margin:0px 5px 15px 5px;
+		border: 1px solid #ccc;
+		text-decoration:none !important;
+		@include border-radius(5px);
+		img{
+			margin:0 auto!important;
+		}
+		span.title{
+			clear:both;
+			display: block;
+			background-color:#333;
+			color:#fff;
+			padding: 3px;
+		}
+	}
+
+
+.productdescription{
+}
+
+.productdetail{
+	overflow:hidden;
+	clear:both;
+	.producttable{
+		width:100%;
+		float:left;
+		clear:both;
+		thead tr{
+			background: #333;
+			th{
+			padding:5px;
+			color:#fff;
+			}
+		}
+		tr.odd {
+			background: #ccc;
+		}
+		
+		td{
+			border:none !important;
+		}
+
+	}
+	}
+	.links{
+		float:right;
+		margin-left:10px;
+	}
+
+
+}
+
+
+.two-column-left .category, .two-column-right .category{
+	overflow:hidden;
+	clear:both;
+	h3{
+		margin:18 0;
+		font-size: 18px!important;
+		font-weight: bold!important;
+		padding: 2px 4px;
+			a{
+			font-size: 19px!important;
+			position:relative;
+			width:auto;
+			text-decoration:none!important;
+				span.viewall{
+				visibility:hidden;
+				}
+			&:hover span.viewall{
+				visibility:visible;
+				font-size:10px;
+				font-weight:normal;
+				position:absolute;
+				display:block;
+				padding:1px 5px;
+				text-decoration:none!important;
+				top:3px;
+				right:-35px;
+				@include border-radius(5px);
+				}
+			}
+	}
+
+	.item{
+		display:block;
+		float:left;
+		width:auto;
+		margin:0px 5px 15px 5px;
+		padding: 5px;
+		border: 1px solid #ccc;
+		@include border-radius(5px);
+		span.title{
+			clear:both;
+			display: block;
+		}	
+	}
+	
+	.product-thumb{
+		display:block;
+		float:left;
+		width:auto;
+		margin:0px 5px 15px 5px;
+		border: 1px solid #ccc;
+		text-decoration:none !important;
+		@include border-radius(5px);
+		img{
+			margin:0 auto;
+		}
+		span.title{
+			clear:both;
+			display: block;
+			background-color:#333;
+			color:#fff;
+			padding: 3px;
+		}
+	}
+
+
+.productdescription{
+}
+
+.productdetail{
+	overflow:hidden;
+	.producttable{
+		width:64%;
+		float:left;
+		thead tr{
+			background: #333;
+			th{
+			padding:5px;
+			color:#fff;
+			}
+		}
+		tr.odd {
+			background: #ccc;
+		}
+		
+		td{
+			border:none !important;
+		}
+
+	}
+	
+	.links{
+		width:35%;
+		float:right;
+	}
+}
+
+}
+

@@ -1,0 +1,3 @@
+﻿<% if RotatorItem %>
+<div id="Intro"><% control FeaturedRotatorItem(10) %><div><% if PDF %><a href="$PDF.URL" target="_blank"><% else_if Link %><a href="$Link" <% if LinkTo %>target="_blank"<% end_if %>><% end_if %>$Image.SetWidth(460)<% if Link %></a><% end_if %></div><% end_control %></div>
+<% end_if %>

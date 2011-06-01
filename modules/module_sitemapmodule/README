@@ -1,0 +1,76 @@
+###############################################
+Site Map Module 0.1
+###############################################
+
+Maintainer Contact
+-----------------------------------------------
+Michael Bollig (Nickname: designcity) <ss (at) designcity (dot) com (dot) au>
+
+Requirements
+-----------------------------------------------
+SilverStripe 2.3+ or 2.4.0. If it runs on 2.2.3 please get in touch.
+
+Documentation
+-----------------------------------------------
+Below, the _config.php and SiteMapModule.php code. 
+
+If you have any issues, chase me up on the silverstripe IRC channel (http://doc.silverstripe.org/doku.php?id=irc)
+
+Installation Instructions
+-----------------------------------------------
+1. 	Place this directory in the root of your SilverStripe installation
+	i.e. you will now have the following root folders
+
+	assets
+	mysite
+	cms
+	sapphire
+	sitemapmodule
+
+2. 	Visit http://www.yoursite.com/dev/build in your browser (where yoursite.com refers to the URL of your SilverStripe site)
+
+3. Change Page Title, Page URL, Hidden Classes, Permissions Check and Theme as below.
+
+Usage Overview
+-----------------------------------------------
+
+PLEASE NOTE: Nothing is added to the CMS - your site map will appear when you visit http://www.yoursite.com/site-map/ (This URL can be changed as detailed below).
+
+The following configuration options are available:
+
+SITE MAP PAGE TITLE
+	Add the following line to your _config.php to override the default Title for the site map page. Uses 'Site Map' by default.
+	
+	SiteMapModule::setTitle('Site Map');
+	
+SITE MAP URL
+	Add the following line to your _config.php to override the default URL Segment for the site map. Uses 'site-map' by default.
+	
+	SiteMapModule::setURLSegment('site-map');
+	
+HIDE PAGE TYPES FROM THE SITE MAP
+	Add the following line to your _config.php to override the default page types that are skipped when rendering the site map.
+	
+	Page classes must be listed in single quotes and separated by commas. List of page types must be contained within double quotes.
+	
+	SiteMapModule::skipPageTypes(" 'ErrorPage', 'OtherPage', 'OtherPage' ");
+
+CHECK USER PERMISSIONS AND HIDE PAGES THE USER CAN'T VIEW
+	Add the following line to your _config.php to do a permissions check to ensure only pages the user is allowed to view are shown.
+
+	SiteMapModule::setPermissionCheck(true);
+	
+	Can either be true (will check permissions) or false (will not check permissions).
+	
+SITE MAP THEME
+	Add the following line to your _config.php to switch the theme from the default minimal theme to slickmap:
+
+	SiteMapModule::setTheme('slickmap');
+	
+	Either set the theme name to 'default' or remove the SiteMapModule::setTheme line from your _config.php to switch back to the default theme.
+
+
+To do
+-----------------------------------------------
+
+* Add Translatable support

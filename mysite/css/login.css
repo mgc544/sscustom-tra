@@ -1,0 +1,77 @@
+﻿ 
+/*-------------------------------------------------
+LOGIN
+-------------------------------------------------*/
+ 
+body.login {
+  padding: 0;
+  text-align: center;
+  border: none;
+  background: #eee url(../images/login-bg.jpg) repeat-x !important;
+}
+ 
+ 
+body.login div.login_dialog h1 {
+font-size: 16px;
+font-weight: normal;
+color:#000 !important;
+line-height: 19px;
+margin: 13px 0px 15px;
+}
+user agent stylesheet
+h1 {
+display: block;
+font-size: 2em;
+color:#000 !important;
+font-weight: bold;
+margin: 0.67em 0px;
+} 
+body.login div#login_content {
+  margin: 0px auto 20px auto;
+  padding-top:130px;
+  text-align: center;
+  width: 100%;
+  max-width: 988px;
+  background: url(../images/login-bg2.jpg) no-repeat;
+}
+ 
+body.login div#login_content_inner {
+  text-align: center;
+  width: 100%;
+  max-width: 988px;
+  padding-bottom: 20px;
+}
+ 
+ 
+body.login div.dialog_contents {
+  padding: 6px 0;
+}
+
+body.login div.dialog_contents img {
+  margin: 10px 0px 60px 0;
+}
+ 
+
+ 
+body.login div.login_dialog {
+  width: 410px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 10px 39px 19px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  -moz-box-shadow: 0 0 6px #999; /* firefox 3.5+ */
+        -webkit-box-shadow: 0 0 6px #999; /* webkit */
+        box-shadow: 0 0 6px #999;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999')"; /* IE 8+ */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999'); /* IE <= 7 */
+}
+
+body.login div.login_dialog label {
+	color:#333 !important;
+}
+
+ 
+ 

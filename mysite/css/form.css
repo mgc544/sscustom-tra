@@ -1,0 +1,177 @@
+/* line 4, ../src/form.scss */
+label {
+  font-weight: bold;
+}
+
+/* line 5, ../src/form.scss */
+fieldset {
+  padding: 0 1.4em 1.4em 1.4em;
+  margin: 0 0 1.5em 0;
+  border: none;
+}
+
+/* line 6, ../src/form.scss */
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: -0.2em;
+  margin-bottom: 1em;
+}
+
+/* line 8, ../src/form.scss */
+fieldset, #IE8#HACK {
+  padding-top: 1.4em;
+}
+
+/* line 9, ../src/form.scss */
+legend, #IE8#HACK {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 13, ../src/form.scss */
+input[type=text], input[type=password],
+input.text, input.title,
+textarea {
+  background-color: #fff;
+  border: 1px solid #bbb;
+}
+
+/* line 19, ../src/form.scss */
+input[type=text]:focus, input[type=password]:focus,
+input.text:focus, input.title:focus,
+textarea:focus {
+  border-color: #666;
+}
+
+/* line 22, ../src/form.scss */
+select {
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* line 26, ../src/form.scss */
+input[type=text], input[type=password],
+input.text, input.title,
+textarea, select {
+  margin: 0.5em 0;
+}
+
+/* line 31, ../src/form.scss */
+input.text,
+input.title {
+  width: 300px;
+  padding: 5px;
+}
+
+/* line 32, ../src/form.scss */
+input.title {
+  font-size: 1.5em;
+}
+
+/* line 33, ../src/form.scss */
+textarea {
+  width: 390px;
+  height: 250px;
+  padding: 5px;
+}
+
+/* line 36, ../src/form.scss */
+form.inline {
+  line-height: 3;
+}
+
+/* line 37, ../src/form.scss */
+form.inline p {
+  margin-bottom: 0;
+}
+
+/* line 44, ../src/form.scss */
+.error,
+.alert,
+.notice,
+.success,
+.info {
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border: 2px solid #ddd;
+}
+
+/* line 46, ../src/form.scss */
+.error, .alert {
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4;
+}
+
+/* line 47, ../src/form.scss */
+.notice {
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+}
+
+/* line 48, ../src/form.scss */
+.success {
+  background: #e6efc2;
+  color: #264409;
+  border-color: #c6d880;
+}
+
+/* line 49, ../src/form.scss */
+.info {
+  background: #d5edf8;
+  color: #205791;
+  border-color: #92cae4;
+}
+
+/* line 50, ../src/form.scss */
+.error a, .alert a {
+  color: #8a1f11;
+}
+
+/* line 51, ../src/form.scss */
+.notice a {
+  color: #514721;
+}
+
+/* line 52, ../src/form.scss */
+.success a {
+  color: #264409;
+}
+
+/* line 53, ../src/form.scss */
+.info a {
+  color: #205791;
+}
+
+/* line 57, ../src/form.scss */
+#SearchFrom_EquipmentSearch {
+  position: relative;
+}
+/* line 59, ../src/form.scss */
+#SearchFrom_EquipmentSearch .left {
+  display: none;
+}
+/* line 60, ../src/form.scss */
+#SearchFrom_EquipmentSearch fieldset {
+  margin: 0px;
+  padding: 0px;
+}
+/* line 61, ../src/form.scss */
+#SearchFrom_EquipmentSearch #SearchFrom_EquipmentSearch_random {
+  width: auto;
+  margin: 0px;
+  padding: 2px;
+}
+/* line 62, ../src/form.scss */
+#SearchFrom_EquipmentSearch div.Actions {
+  position: absolute;
+  top: 0px;
+  left: 160px;
+}
+/* line 64, ../src/form.scss */
+#SearchFrom_EquipmentSearch div.Actions input.action {
+  margin: 0px;
+}

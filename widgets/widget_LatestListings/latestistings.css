@@ -1,0 +1,55 @@
+/*
+Latest Listings */
+/* Container DIV - automatically generated */
+/* line 5, ../src/listings.scss */
+.horz .simply-scroll-container,
+.vert .simply-scroll-container {
+  position: relative;
+}
+
+/* line 11, ../src/listings.scss */
+.horz .simply-scroll-clip,
+.vert .simply-scroll-clip {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* line 17, ../src/listings.scss */
+.horz .simply-scroll-clip {
+  height: 80px;
+}
+
+/* line 20, ../src/listings.scss */
+.vert .simply-scroll-clip {
+  height: 250px;
+}
+
+/* line 26, ../src/listings.scss */
+.horz .simply-scroll-list,
+.vert ul.simply-scroll-list {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 35, ../src/listings.scss */
+.vert .simply-scroll-list li, .horz .simply-scroll-list li {
+  margin: 0;
+  list-style: none;
+  display: block;
+  width: 100%;
+}
+/* line 40, ../src/listings.scss */
+.vert .simply-scroll-list li a, .horz .simply-scroll-list li a {
+  clear: both;
+  overflow: hidden;
+}
+/* line 44, ../src/listings.scss */
+.vert .simply-scroll-list li img, .horz .simply-scroll-list li img {
+  float: left;
+  margin-right: 5px;
+}

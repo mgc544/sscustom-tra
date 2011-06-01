@@ -1,0 +1,41 @@
+﻿.demo1{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+.demo1 li{
+	list-style:none;
+	margin:0px;
+	padding:5px !important;
+	background:#FFFFFF;
+	overflow:hidden;
+}
+
+.demo1 li.currentvideo{
+	background:#ccc;
+}
+
+
+.demo1 li a{
+	display:inline-block;
+	float:left;
+}
+
+.demo1 li span.videoinfo{
+	white-space: nowrap;
+	width: 65%;
+	display:inline-block;
+	float:right;
+	overflow: hidden;
+	color:#00549A;
+	text-overflow: ellipsis;
+	
+}
+
+
+.demo1 li img{
+	width:65px;
+	float:left;
+	margin-right:5px;
+}

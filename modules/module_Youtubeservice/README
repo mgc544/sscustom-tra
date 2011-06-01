@@ -1,0 +1,50 @@
+###############################################
+Youtube Module
+###############################################
+
+19 November 2007
+
+Maintainer Contact
+-----------------------------------------------
+Lakshan Perera (Nickname: lperera)
+<perera.lakshan (at) gmail (dot) com>
+
+Requirements
+-----------------------------------------------
+PHP 5.2.5 (Due to bugfixes in SimpleXML, see http://nz.php.net/ChangeLog-5.php)
+
+Documentation
+-----------------------------------------------
+http://doc.silverstripe.com/doku.php?id=modules:youtubeservice
+
+Installation Instructions
+-----------------------------------------------
+1. Place this directory in the root of your SilverStripe installation
+I.e. you will now have the following root folders
+
+assets
+mysite
+cms
+jsparty
+sapphire
+youtubeservice
+
+2. Run /db/build/
+
+3. The CMS should now have a new "YoutubeGallery" page type.
+   Create a page and set the parameters correctly on 'Videos' tab to grab the videos for display.
+
+4. If you have blog module installed, this you could use the YoutubeWidget which comes with this module.
+
+5. Add these and visit your public site to reflect the changes
+
+:: NOTE ::
+If you are still using deprecated all-in-one mashups module, please remove it before installing this. All other functionalities which were available in mashups module are now available in separate modules.
+
+* The new update of the YouTube API doesn't require to have an API key. So no need to worry on applying for an API key ;)
+
+Usage Overview
+-----------------------------------------------
+
+Known issues:
+-----------------------------------------------

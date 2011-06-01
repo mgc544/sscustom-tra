@@ -1,0 +1,1 @@
+<div id="footer"><p>$SiteConfig.Copyright</p></div><div class="clearfix"></div>

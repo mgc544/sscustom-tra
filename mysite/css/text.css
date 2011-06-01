@@ -1,0 +1,306 @@
+/* 960 Grid System ~ Text CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+/* line 4, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+body {
+  font: 13px/1.5 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+/* line 6, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+a:focus {
+  outline: 1px dotted invert;
+}
+
+/* line 8, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+hr {
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+}
+
+/* line 14, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+h1 {
+  font-size: 25px;
+}
+
+/* line 16, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+h2 {
+  font-size: 23px;
+}
+
+/* line 18, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+h3 {
+  font-size: 21px;
+}
+
+/* line 20, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+h4 {
+  font-size: 19px;
+}
+
+/* line 22, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+h5 {
+  font-size: 17px;
+}
+
+/* line 24, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+h6 {
+  font-size: 15px;
+}
+
+/* line 26, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+ol {
+  list-style: decimal;
+}
+
+/* line 28, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+ul {
+  list-style: square;
+}
+
+/* line 30, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+li {
+  margin-left: 30px;
+}
+
+/* line 32, ../../../../../compass.app/lib/ruby/compass_extensions/compass-960-plugin-0.10.0/stylesheets/960/_text.sass */
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+  margin-bottom: 20px;
+}
+
+/** 
+ * SilverStripe Black Candy Theme
+ * http://www.silverstripe.com
+ *
+ * This typography file is included in the WYSIWYG editor and the front end. It provides
+ * a place to add link styles and font styles you would like in the CMS and the Front End.
+ */
+/* GENERIC STYLES 
+-------------------------------------------- */
+/* line 23, ../src/text.scss */
+.typography * {
+  font-family: Verdana, Lucida, Arial, sans-serif;
+}
+
+/* PARAGRAPHS 
+-------------------------------------------- */
+/* line 29, ../src/text.scss */
+.typography p {
+  color: #666;
+  line-height: 18px;
+  font-size: 12px;
+  margin: 0 0 18px 0;
+}
+
+/* QUOTES
+-------------------------------------------- */
+/* line 38, ../src/text.scss */
+.typography blockquote {
+  margin: 10px;
+  font-size: 1.4em;
+  color: #777;
+  font-style: italic;
+}
+
+/* line 39, ../src/text.scss */
+.typography q {
+  display: block;
+  font-size: 0.8em;
+  margin: 1em 1em;
+  padding: 0.5em;
+  border: 1px #ccc solid;
+}
+
+/* LINKS 
+-------------------------------------------- */
+/* line 48, ../src/text.scss */
+.typography a {
+  text-decoration: none;
+}
+
+/* line 49, ../src/text.scss */
+.typography a:hover {
+  text-decoration: underline;
+}
+
+/* LINK ICONS - shows type of file
+------------------------------------ */
+/* line 55, ../src/text.scss */
+.typography a[href$=".pdf"],
+.typography a[href$=".PDF"],
+.typography a.pdf {
+  padding: 2px;
+  padding-left: 20px;
+  background: url("../../blackcandy/images/icons/page_white_acrobat.png") no-repeat left center;
+}
+
+/* line 62, ../src/text.scss */
+.typography a[href$=".doc"],
+.typography a[href$=".DOC"],
+.typography a.doc {
+  padding: 2px;
+  padding-left: 20px;
+  background: url("../../blackcandy/images/icons/page_word.png") no-repeat left center;
+}
+
+/* line 69, ../src/text.scss */
+.typography a[href$=".xls"],
+.typography a[href$=".XLS"],
+.typography a.xls {
+  padding: 2px;
+  padding-left: 20px;
+  background: url("../../blackcandy/images/icons/page_excel.png") no-repeat left center;
+}
+
+/* line 80, ../src/text.scss */
+.typography a[href$=".gz"],
+.typography a[href$=".GZ"],
+.typography a[href$=".gzip"],
+.typography a[href$=".GZIP"],
+.typography a[href$=".zip"],
+.typography a[href$=".ZIP"],
+.typography a.archive {
+  padding: 2px;
+  padding-left: 20px;
+  background: url("../../blackcandy/images/icons/page_white_zip.png") no-repeat left center;
+}
+
+/* line 87, ../src/text.scss */
+.typography a[href$=".exe"],
+.typography a[href$=".EXE"],
+.typography a.application {
+  padding: 2px;
+  padding-left: 20px;
+  background: url("../../blackcandy/images/icons/application.png") no-repeat left center;
+}
+
+/* LIST STYLES 
+-------------------------------------------- */
+/* line 96, ../src/text.scss */
+.typography ul,
+.typography ol {
+  margin: 0 0 18px 24px;
+}
+
+/* line 99, ../src/text.scss */
+.typography li {
+  margin: 5px 10px;
+  font-size: 11px;
+}
+
+/* line 103, ../src/text.scss */
+.typography li li {
+  font-size: 10px;
+}
+
+/* HEADER STYLES 
+-------------------------------------------- */
+/* line 111, ../src/text.scss */
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
+  color: #5d5d5d;
+  margin: 0 0 18px 0;
+}
+
+/* line 116, ../src/text.scss */
+.typography h1 {
+  font-size: 24px;
+}
+
+/* line 117, ../src/text.scss */
+.typography h2 {
+  font-size: 18px;
+}
+
+/* line 118, ../src/text.scss */
+.typography h3 {
+  font-size: 14px;
+}
+
+/* line 119, ../src/text.scss */
+.typography h4, .typography h5, .typography h6 {
+  fofont-size: 12px;
+  font-weight: bold;
+}
+
+/* TABLE STYLING 
+-------------------------------------------- */
+/* line 124, ../src/text.scss */
+.typography table {
+  margin: 0 0 18px 0;
+  font-size: 11px;
+  color: #666;
+  border-collapse: collapse;
+}
+
+/* line 127, ../src/text.scss */
+.typography td {
+  border: 1px solid #E5E5E5;
+  padding: 5px;
+}
+
+/* WYSIWYG EDITOR ALIGNMENT CLASSES 
+-------------------------------------------- */
+/* line 134, ../src/text.scss */
+.typography .left {
+  text-align: left;
+}
+
+/* line 137, ../src/text.scss */
+.typography .center {
+  text-align: center;
+}
+
+/* line 140, ../src/text.scss */
+.typography .right {
+  text-align: right;
+}
+
+/* IMAGES 
+-------------------------------------------- */
+/* line 146, ../src/text.scss */
+.typography img {
+  border: none;
+}
+
+/* line 149, ../src/text.scss */
+.typography img.right {
+  float: right;
+  margin-left: 10px;
+}
+
+/* line 153, ../src/text.scss */
+.typography img.left {
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 157, ../src/text.scss */
+.typography img.leftAlone {
+  float: left;
+  margin-right: 100%;
+}
+
+/* line 161, ../src/text.scss */
+.typography img.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

@@ -1,0 +1,64 @@
+/*Slide Show Styles----------------------------------------------------------------------*/
+/* line 3, ../src/jshowoff.scss */
+#Intro {
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10px;
+  height: 300px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* line 17, ../src/jshowoff.scss */
+.jshowoff {
+  width: 700px;
+  overflow: hidden;
+}
+/* line 21, ../src/jshowoff.scss */
+.jshowoff img {
+  overflow: hidden;
+  margin: 0 0 10px 0;
+  border: 1px #828282 solid;
+}
+/* line 27, ../src/jshowoff.scss */
+.jshowoff p.jshowoff-slidelinks {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+/* line 36, ../src/jshowoff.scss */
+.jshowoff p.jshowoff-controls {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+/* line 44, ../src/jshowoff.scss */
+.jshowoff:hover p.jshowoff-controls {
+  visibility: visible;
+  z-index: 9999;
+}
+/* line 50, ../src/jshowoff.scss */
+.jshowoff .jshowoff-slidelinks a,
+.jshowoff .jshowoff-controls a {
+  display: block;
+  background-color: #000;
+  color: #ffffff;
+  padding: 5px 7px 5px;
+  margin: 5px 0 0 5px;
+  float: left;
+  text-decoration: none;
+  outline: none;
+  line-height: 14px;
+}
+/* line 61, ../src/jshowoff.scss */
+.jshowoff .jshowoff-slidelinks a :hover,
+.jshowoff .jshowoff-controls a :hover {
+  color: #ffffff;
+}

@@ -1,0 +1,489 @@
+/* line 17, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 115, ../../../../../compass.app/lib/ruby/compass_0.11/compass-0.11.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/*------------------------ Global syles----------------------------*/
+/* line 10, ../src/layout.scss */
+body {
+  background: #333 !important;
+  padding: 10px 0px;
+}
+
+/*------------------------ Layout syles----------------------------*/
+/* line 20, ../src/layout.scss */
+.two-column-left,
+.full-width,
+.two-column-right,
+.three-column {
+  background: #fff;
+}
+
+/* for left sidebar main-content */
+/* line 25, ../src/layout.scss */
+.full-width {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+}
+/* line 30, ../src/layout.scss */
+.full-width #header,
+.full-width #footer,
+.full-width #main-content {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 32, ../src/layout.scss */
+.full-width #header, .full-width #footer {
+  width: 940px;
+}
+/* line 34, ../src/layout.scss */
+.full-width #main-content {
+  width: 940px;
+}
+
+/* for left sidebar main-content */
+/* line 38, ../src/layout.scss */
+.two-column-left {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+}
+/* line 44, ../src/layout.scss */
+.two-column-left #header,
+.two-column-left #footer,
+.two-column-left #sidebar-left,
+.two-column-left #main-content {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 46, ../src/layout.scss */
+.two-column-left #header, .two-column-left #footer {
+  width: 940px;
+}
+/* line 48, ../src/layout.scss */
+.two-column-left #sidebar-left {
+  width: 220px;
+}
+/* line 50, ../src/layout.scss */
+.two-column-left #main-content {
+  width: 700px;
+}
+
+/* for right sidebar main-content */
+/* line 54, ../src/layout.scss */
+.two-column-right {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+}
+/* line 60, ../src/layout.scss */
+.two-column-right #header,
+.two-column-right #footer,
+.two-column-right #sidebar-right,
+.two-column-right #main-content {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 62, ../src/layout.scss */
+.two-column-right #header, .two-column-right #footer {
+  width: 940px;
+}
+/* line 64, ../src/layout.scss */
+.two-column-right #sidebar-right {
+  width: 220px;
+}
+/* line 66, ../src/layout.scss */
+.two-column-right #main-content {
+  width: 700px;
+}
+
+/* for left and right sidebars main-content centered */
+/* line 70, ../src/layout.scss */
+.three-column {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  overflow: hidden;
+}
+/* line 77, ../src/layout.scss */
+.three-column #header,
+.three-column #footer,
+.three-column #sidebar-left,
+.three-column #sidebar-right,
+.three-column #main-content {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* line 79, ../src/layout.scss */
+.three-column #header, .three-column #footer {
+  width: 940px;
+}
+/* line 81, ../src/layout.scss */
+.three-column #sidebar-left, .three-column #sidebar-right {
+  width: 220px;
+}
+/* line 83, ../src/layout.scss */
+.three-column #main-content {
+  width: 460px;
+}
+
+/*------------------------ Custom syles----------------------------*/
+/* line 90, ../src/layout.scss */
+#header {
+  height: 100px;
+  background: #ccc;
+}
+
+/*------------------------ Product syles----------------------------*/
+/* Sample manufacure specific class ---  Replace with appropriate color */
+/* line 107, ../src/layout.scss */
+.new-mainproductholder h3 {
+  background-color: #cccccc;
+  color: #fff !important;
+}
+/* line 110, ../src/layout.scss */
+.new-mainproductholder h3 a {
+  color: #fff !important;
+}
+/* line 112, ../src/layout.scss */
+.new-mainproductholder h3 a span.viewall {
+  visibility: hidden;
+}
+/* line 115, ../src/layout.scss */
+.new-mainproductholder h3 a:hover span.viewall {
+  background: #666666;
+  color: #fff !important;
+}
+/* line 122, ../src/layout.scss */
+.new-mainproductholder .producttable thead tr {
+  background: #666666 !important;
+}
+/* line 124, ../src/layout.scss */
+.new-mainproductholder .producttable thead tr th {
+  padding: 5px;
+  color: #fff;
+}
+/* line 129, ../src/layout.scss */
+.new-mainproductholder .producttable tr.odd {
+  background: #ccc;
+}
+/* line 135, ../src/layout.scss */
+.new-mainproductholder .product-thumb span.title {
+  background-color: #cccccc !important;
+  color: #fff !important;
+}
+
+/* line 148, ../src/layout.scss */
+.three-column .category {
+  overflow: hidden;
+  clear: both;
+}
+/* line 151, ../src/layout.scss */
+.three-column .category h3 {
+  margin: 18 0;
+  font-size: 18px!important;
+  font-weight: bold!important;
+  padding: 2px 4px;
+}
+/* line 156, ../src/layout.scss */
+.three-column .category h3 a {
+  font-size: 19px!important;
+  position: relative;
+  width: auto;
+  text-decoration: none!important;
+}
+/* line 161, ../src/layout.scss */
+.three-column .category h3 a span.viewall {
+  visibility: hidden;
+}
+/* line 164, ../src/layout.scss */
+.three-column .category h3 a:hover span.viewall {
+  visibility: visible;
+  font-size: 10px;
+  font-weight: normal;
+  position: absolute;
+  display: block;
+  padding: 1px 5px;
+  text-decoration: none!important;
+  top: 3px;
+  right: -35px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 179, ../src/layout.scss */
+.three-column .category .item {
+  display: block;
+  float: right;
+  width: auto;
+  margin: 0px 5px 15px 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 187, ../src/layout.scss */
+.three-column .category .item span.title {
+  clear: both;
+  display: block;
+}
+/* line 193, ../src/layout.scss */
+.three-column .category .product-thumb {
+  display: block;
+  float: left;
+  width: auto;
+  margin: 0px 5px 15px 5px;
+  border: 1px solid #ccc;
+  text-decoration: none !important;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 201, ../src/layout.scss */
+.three-column .category .product-thumb img {
+  margin: 0 auto!important;
+}
+/* line 204, ../src/layout.scss */
+.three-column .category .product-thumb span.title {
+  clear: both;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  padding: 3px;
+}
+/* line 217, ../src/layout.scss */
+.three-column .category .productdetail {
+  overflow: hidden;
+  clear: both;
+}
+/* line 220, ../src/layout.scss */
+.three-column .category .productdetail .producttable {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+/* line 224, ../src/layout.scss */
+.three-column .category .productdetail .producttable thead tr {
+  background: #333;
+}
+/* line 226, ../src/layout.scss */
+.three-column .category .productdetail .producttable thead tr th {
+  padding: 5px;
+  color: #fff;
+}
+/* line 231, ../src/layout.scss */
+.three-column .category .productdetail .producttable tr.odd {
+  background: #ccc;
+}
+/* line 235, ../src/layout.scss */
+.three-column .category .productdetail .producttable td {
+  border: none !important;
+}
+/* line 241, ../src/layout.scss */
+.three-column .category .links {
+  float: right;
+  margin-left: 10px;
+}
+
+/* line 250, ../src/layout.scss */
+.two-column-left .category, .two-column-right .category {
+  overflow: hidden;
+  clear: both;
+}
+/* line 253, ../src/layout.scss */
+.two-column-left .category h3, .two-column-right .category h3 {
+  margin: 18 0;
+  font-size: 18px!important;
+  font-weight: bold!important;
+  padding: 2px 4px;
+}
+/* line 258, ../src/layout.scss */
+.two-column-left .category h3 a, .two-column-right .category h3 a {
+  font-size: 19px!important;
+  position: relative;
+  width: auto;
+  text-decoration: none!important;
+}
+/* line 263, ../src/layout.scss */
+.two-column-left .category h3 a span.viewall, .two-column-right .category h3 a span.viewall {
+  visibility: hidden;
+}
+/* line 266, ../src/layout.scss */
+.two-column-left .category h3 a:hover span.viewall, .two-column-right .category h3 a:hover span.viewall {
+  visibility: visible;
+  font-size: 10px;
+  font-weight: normal;
+  position: absolute;
+  display: block;
+  padding: 1px 5px;
+  text-decoration: none!important;
+  top: 3px;
+  right: -35px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 281, ../src/layout.scss */
+.two-column-left .category .item, .two-column-right .category .item {
+  display: block;
+  float: left;
+  width: auto;
+  margin: 0px 5px 15px 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 289, ../src/layout.scss */
+.two-column-left .category .item span.title, .two-column-right .category .item span.title {
+  clear: both;
+  display: block;
+}
+/* line 295, ../src/layout.scss */
+.two-column-left .category .product-thumb, .two-column-right .category .product-thumb {
+  display: block;
+  float: left;
+  width: auto;
+  margin: 0px 5px 15px 5px;
+  border: 1px solid #ccc;
+  text-decoration: none !important;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 303, ../src/layout.scss */
+.two-column-left .category .product-thumb img, .two-column-right .category .product-thumb img {
+  margin: 0 auto;
+}
+/* line 306, ../src/layout.scss */
+.two-column-left .category .product-thumb span.title, .two-column-right .category .product-thumb span.title {
+  clear: both;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  padding: 3px;
+}
+/* line 319, ../src/layout.scss */
+.two-column-left .category .productdetail, .two-column-right .category .productdetail {
+  overflow: hidden;
+}
+/* line 321, ../src/layout.scss */
+.two-column-left .category .productdetail .producttable, .two-column-right .category .productdetail .producttable {
+  width: 64%;
+  float: left;
+}
+/* line 324, ../src/layout.scss */
+.two-column-left .category .productdetail .producttable thead tr, .two-column-right .category .productdetail .producttable thead tr {
+  background: #333;
+}
+/* line 326, ../src/layout.scss */
+.two-column-left .category .productdetail .producttable thead tr th, .two-column-right .category .productdetail .producttable thead tr th {
+  padding: 5px;
+  color: #fff;
+}
+/* line 331, ../src/layout.scss */
+.two-column-left .category .productdetail .producttable tr.odd, .two-column-right .category .productdetail .producttable tr.odd {
+  background: #ccc;
+}
+/* line 335, ../src/layout.scss */
+.two-column-left .category .productdetail .producttable td, .two-column-right .category .productdetail .producttable td {
+  border: none !important;
+}
+/* line 341, ../src/layout.scss */
+.two-column-left .category .productdetail .links, .two-column-right .category .productdetail .links {
+  width: 35%;
+  float: right;
+}
