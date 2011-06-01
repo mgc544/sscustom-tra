@@ -6,6 +6,7 @@ class StoreLocation extends DataObject {
 	
     static $db = array(
         'Name' => 'Varchar(80)',
+		'URLSegment' => 'Varchar(255)',
 		'Address' => 'Varchar(80)',
 		'City' => 'Varchar(80)',
 		'State' => 'Varchar(80)',
@@ -64,6 +65,7 @@ class StoreLocation extends DataObject {
 			new HorizontalTabSet("Root",
 			new Tab('Info',
 				new TextField('Name', 'StoreID'),
+				new TextField('URLSegment', 'URLSegment'),
 				new TextField('Address', 'Address'),
 				new TextField('City', 'City'),
 				new TextField('State', 'State'),
@@ -100,7 +102,7 @@ class StoreLocation extends DataObject {
 	
 		//Return the Name as a menu title
 	public function MenuTitle(){
-		return $this->Name;
+		return $this->City;
 	}
 	
 
@@ -109,17 +111,54 @@ class StoreLocation extends DataObject {
 		return $this->Name;
 	}
 	
+	function Link() {
+        if($ProductHolder = $this->StoreLocatorPage()) {
+			return $ProductHolder->absoluteLink().'store/'.$this->URLSegment;
+		}
+    }
+	
 	public function Children(){
         return $this->Children;
     }
 	
-	public function Link()
-	{
-		if($StoreLocatorPage = $this->StoreLocatorPage())
-		{
-			return $StoreLocatorPage->Link('store/') . $this->ID;	
-		}
-	}
-
+	
+	
+	//Set URLSegment to be unique on write
+    function onBeforeWrite()
+    {       
+        // If there is no URLSegment set, generate one from Title
+        if((!$this->URLSegment || $this->URLSegment == 'new-location') && $this->City != 'New Location') 
+        {
+            $this->URLSegment = SiteTree::generateURLSegment($this->City);
+        } 
+        else if($this->isChanged('URLSegment')) 
+        {
+            // Make sure the URLSegment is valid for use in a URL
+            $segment = preg_replace('/[^A-Za-z0-9]+/','-',$this->URLSegment);
+            $segment = preg_replace('/-+/','-',$segment);
+              
+            // If after sanitising there is no URLSegment, give it a reasonable default
+            if(!$segment) {
+                $segment = "location-$this->ID";
+            }
+            $this->URLSegment = $segment;
+        }
+  
+        // Ensure that this object has a non-conflicting URLSegment value.
+        $count = 2;
+        while($this->LookForExistingURLSegment($this->URLSegment)) 
+        {
+            $this->URLSegment = preg_replace('/-[0-9]+$/', null, $this->URLSegment) . '-' . $count;
+            $count++;
+        }
+  
+        parent::onBeforeWrite();
+    }
+          
+    //Test whether the URLSegment exists already on another Location
+    function LookForExistingURLSegment($URLSegment)
+    {
+        return (DataObject::get_one('StoreLocation', "URLSegment = '" . $URLSegment ."' AND ID != " . $this->ID));
+    }
+	
 }
-
