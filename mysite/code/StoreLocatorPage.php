@@ -52,8 +52,10 @@ class StoreLocatorPage_Controller extends Page_Controller {
 		parent::init();
 		
 		$markerParams = Director::urlParams();
-		if($markerParams['ID'] && is_numeric($markerParams['ID'])) {
-			$markerId = (int)$markerParams['ID'];
+		//print_r($this->getURLParams());
+		if($markerParams['ID'] && !is_numeric($markerParams['ID'])) {
+			$markerId = $markerParams['ID'];
+			//echo $markerId;
 		}
 		else {
 			$markerId = '';
@@ -64,28 +66,7 @@ class StoreLocatorPage_Controller extends Page_Controller {
     	Requirements::javascript("http://maps.google.com/maps?file=api&v=2.x&key=".$GMaps_API_Key);
 		
 		$Baseurl = Director::BaseURL(); 
-		Requirements::customScript(<<<JS
-		$(document).ready(function($){ 
-			
-			$("div.location").hover(
-				function(){
-					$(this).toggleClass("current");
-				},
-				function () {
-					
-					$(this).removeClass("current");
-				  }
-			);					
-		});
-		function loadAjax(loadIntoElID, url) {
-		 var imgHtml = '<div class="loader"></div>';
-		 var loadurl = url + " #storeinfo ";
-		 jQuery("#" + loadIntoElID).html(imgHtml);
-		 jQuery("#" + loadIntoElID).load(loadurl);
-		 return true;
-		}
-JS
-);
+		
 		Requirements::customScript(<<<JS
 		//<![CDATA[
 		    if (GBrowserIsCompatible()) {
@@ -213,11 +194,13 @@ JS
 		function markers() {
 			//parent::init();
 			$markerParams = Director::urlParams();
-	   	   	$markerId = (int)$markerParams['ID'];
+	   	   	if($markerParams && !is_numeric($markerParams)) {
+				$markerId = Convert::raw2sql($markerParams['ID']);
+			}
 			
 			$this->response->addHeader("Content-Type", "application/xml");
 			if($markerId) {
-				$StoreLocations = DataObject::get_by_id('StoreLocation', $markerId);
+				$StoreLocations = DataObject::get_one('StoreLocation', "URLSegment = '".$markerId."'");
 			}
 			else {
 				$StoreLocations = DataObject::get('StoreLocation');
@@ -234,16 +217,33 @@ JS
 		return DataObject::get_one('StoreLocation');
 		}
 		
+		//Get's the current product from the URL, if any
+		public function getCurrentLocation()
+		{
+			$Params = $this->getURLParams();
+			$URLSegment = Convert::raw2sql($Params['ID']);
+			  
+			if($URLSegment && $Product = DataObject::get_one('StoreLocation', "URLSegment = '" . $URLSegment . "'"))
+			{       
+				return $Product;
+			}
+		}
 		
-		function store($id = null) {
-	 		$params = Director::urlParams(); 
-	   	   	$id = (int)$params['ID'];
-
-	    	$object2 = DataObject::get_by_id('StoreLocation', $id);
-	      
-	      	return $this 
-	         ->customise(array('StoreLocation' => $object2)) 
-	         ->renderWith(array('Directory')); 
+		function store() {
+	 		//Get the Location
+        if($Location = $this->getCurrentLocation())
+        {
+            $Data = array(
+                'StoreLocation' => $Location  
+            );
+              
+            //return our $Data array to use, rendering with the SingleLocation.ss template
+            return $this->customise($Data)->renderWith(array('SingleLocation', 'Page'));         
+        }
+        else //Product not found
+        {
+            return $this->httpError(404, 'Sorry that product could not be found');
+        }
 		}
 		
 	
